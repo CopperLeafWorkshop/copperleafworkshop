@@ -1,0 +1,5 @@
+#exclude database
+db/*
+
+#Ignore Vagrant
+Vagrant/.vagrant/*

@@ -1,0 +1,22 @@
+---
+  - name: Install PHP Packages
+    register: phpinstalled
+    yum: name={{ item }} update_cache=yes state=latest
+    with_items:
+      - php
+      - php-devel
+      - php-pecl-zendopcache
+      - php-mbstring
+      - php-xml
+      - php-mysql
+      - php-gd
+      - php-pdo
+      - php-drush-drush
+      - php-json
+      - libmcrypt-devel
+      - libmcrypt
+      - php-mcrypt
+
+  - name: Installing custom php.ini
+    when: phpinstalled|success
+    copy: src=php.ini dest=/etc/php.ini 

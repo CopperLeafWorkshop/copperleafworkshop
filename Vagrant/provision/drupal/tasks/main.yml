@@ -1,0 +1,14 @@
+---
+# Commented out since SF variables are hardcoded into settings.php
+#  - name: Clear Salesforce Variables
+#    command: 
+#    with_items:
+#     - mariadb-server
+#    register: mariadbinstalled
+
+
+  - name: Drupal -- Copying Drush Alias
+    copy: src=drush_alias dest=/home/vagrant/.drush/aliases.drushrc.php
+
+  - name: Drupal -- Copying /etc/hosts
+    copy: src=hosts dest=/etc/hosts
