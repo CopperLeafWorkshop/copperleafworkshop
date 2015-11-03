@@ -15,17 +15,22 @@ Pre-steps
 4) Install ansible
 	http://www.tecmint.com/install-and-configure-ansible-automation-tool-in-linux/
 
+Creates the virtualbox and provisions
 vagrant up --provider=virtualbox
 
+Re-provision the box to stock
 vagrant provision
 
+Destroy the vagrant box
 vagrant destroy
 
+Supsend the vagrant box
 vagrant suspend
 
+Resume the vagrant box
 vagrant resume
 
 
 
 reach site at
-http://local.dev.copperleaf.com:8888/
+http://local.dev.copperleafworkshop.com:8888/
