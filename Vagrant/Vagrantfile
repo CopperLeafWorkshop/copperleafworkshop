@@ -29,6 +29,9 @@ config.vm.provider "virtualbox" do |vb|
     ansible.playbook = "playbook.yml"
   end
 
+config.vm.provider "virtualbox" do |v|
+  v.name = "CopperLeafWorkshop.com"
+end
 
 
   config.ssh.insert_key = false
